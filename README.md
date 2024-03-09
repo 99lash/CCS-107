@@ -1,5 +1,5 @@
 # CCS-107-WEB-SYSTEM
-This is web hosting repo for my CCS-107, school activities, & projects.
+This is a web hosting repository for my CCS107, school activities, & projects
 
 <h2>
   Links: 
