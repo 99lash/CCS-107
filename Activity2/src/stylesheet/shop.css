@@ -302,7 +302,7 @@ main section:nth-child(even) {
   }
 }
 
-@media (width <= 410px) {
+@media (width < 410px) {
   .pd-row-2-col-4 {
     display: flex;
     flex-direction: column;
