@@ -31,13 +31,11 @@ body {
 .container {
   width: 8.3in;
   height: 11.7in;
-  margin-inline: auto;
-  padding-block: 2rem;
+  margin: 0 auto;
   background-color: white;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  row-gap: 2.5rem;
 }
 
 header, main {
@@ -142,6 +140,7 @@ a, p {
 /* -------------------------- FOOTER */
 footer {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .f-col-2 h4 {
