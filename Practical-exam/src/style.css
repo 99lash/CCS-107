@@ -35,6 +35,7 @@ body {
   padding-block: 2rem;
   background-color: white;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   row-gap: 2.5rem;
 }
@@ -78,7 +79,7 @@ a, p {
 /* -------------------------- HEADER */
 
 .h-row-1-col-1 {
-  font-size: var(--fs-30px);
+  font-size: var(--fs-24px);
 }
 
 .h-row-1-col-2 {
