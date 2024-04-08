@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity3 - Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="calculator">
+      <div class="screen-display"> 
+        <input type="text" id="display" value="0" readonly>
+        <!-- <div class="screen-last" id="latestScreenValue"></div>
+        <div class="screen-current" id="currentScreenValue">0</div> -->
+      </div>
+      <div class="input-keys">
+          <input type="button" value="AC" class="setmod" onclick="allClear()">
+          <input type="button" value="CE" class="setmod" onclick="clearEntry()">
+          <input type="button" value="%" class="setmod" onclick="toPercentDec()">
+          <input type="button" value="&div;" class="operator" onclick="displayInputOp('/')">
+          <input type="button" value="7" onclick="displayInputNum('7')">
+          <input type="button" value="8" onclick="displayInputNum('8')" >
+          <input type="button" value="9" onclick="displayInputNum('9')">
+          <input type="button" value="&times;" class="operator" onclick="displayInputOp('*')">
+          <input type="button" value="4" onclick="displayInputNum('4')">
+          <input type="button" value="5" onclick="displayInputNum('5')">
+          <input type="button" value="6" onclick="displayInputNum('6')">
+          <!-- <input type="button" value="&minus;" class="operator" onclick="displayInputNum('&minus;')"> -->
+          <input type="button" value="&minus;" class="operator" onclick="displayInputOp('-')">
+          <input type="button" value="1" onclick="displayInputNum('1')">
+          <input type="button" value="2" onclick="displayInputNum('2')">
+          <input type="button" value="3" onclick="displayInputNum('3')">
+          <input type="button" value="&plus;" class="operator" onclick="displayInputOp('+')">
+          <input type="button" value="+/-" onclick="switchSign()">
+          <input type="button" value="0" onclick="displayInputNum('0')">
+          <input type="button" value="." onclick="displayInputNum('.')">
+          <input type="button" value="&equals;" id="equals" class="operator"  onclick="calculate()">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
