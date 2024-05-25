@@ -108,7 +108,7 @@ main {
 }
 
 .slot {
-  border: 2px dotted rgb(17, 221, 17);
+  border: 2px inset rgb(17, 221, 17);
   border-radius: 12px;
   padding: 1em;
   text-align: center;
