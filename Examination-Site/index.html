@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="selection-page" class="active">
+            <h2>Select Number of Questions</h2>
+            <button onclick="startQuiz(10)">10 Questions</button>
+            <button onclick="startQuiz(20)">20 Questions</button>
+            <button onclick="startQuiz(30)">30 Questions</button>
+        </div>
+
+        <div id="quiz-page">
+            <div id="timer"></div>
+            <div id="question-number"></div>
+            <div id="question-container"></div>
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+            <button id="skip-button">Skip</button>
+            <button id="submit-button">Submit</button>
+        </div>
+
+        <div id="result-page">
+            <div id="result"></div>
+            <button id="retry-button">Go back</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
