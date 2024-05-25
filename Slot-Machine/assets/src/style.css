@@ -1,0 +1,277 @@
+:root {
+  --typeface-default: Poppins, sans-serif;
+  --typeface-off-1: 'Courier New', Courier, monospace;
+
+  --fs-13px: 0.8125rem;
+  --fs-14px: 0.875rem;
+  --fs-15px: 0.9375rem;
+  --fs-16px: 1rem;
+  --fs-18px: 1.125rem;
+  --fs-20px: 1.25rem;
+  --fs-24px: 1.5rem;
+  --fs-30px: 1.875rem;
+  --fs-35px: 2.1875rem;
+  --fs-40px: 2.5rem;
+
+  --fw-thin: 100;
+  --fw-extraLight: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semiBold: 600;
+  --fw-bold: 700;
+  --fw-extraBold: 800;
+  --fw-black: 900;
+
+}
+
+* {
+  font-family: var(--typeface-default);
+  font-size: var(--fs-16px);
+  box-sizing: content-box;
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.content {
+  background-image: url('../img/bg.gif');
+}
+/* 
+---- HEADER CONTENTS ----  
+*/
+header {
+  background-color: rgba(0, 0, 0, 0.363);
+  border: 1px outset green;
+}
+
+.compact-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header .compact-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .compact-container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.tooltip {
+  font-size: var(--fs-13px);
+  color: white;
+  background-color: rgb(18, 17, 17);
+  padding: 4px;
+  border: 1px solid white;
+  border-radius: 4px;
+  position: absolute; 
+  display: none;
+}
+
+#reset_demo:hover .tooltip, 
+#minmax_screen:hover .tooltip, 
+#fast_spin_animation_btn:hover .tooltip,
+#play-btn:hover .tooltip,
+.bet-container:hover .tooltip {
+  display: block;
+}
+
+
+/* 
+---- MAIN CONTENTS ----  
+*/
+
+main {
+  height: 100svh;
+}
+
+#slot_machine {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-block: 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  column-gap: 8px;
+}
+
+.slot {
+  border: 2px dotted rgb(17, 221, 17);
+  border-radius: 12px;
+  padding: 1em;
+  text-align: center;
+  background-color: rgba(37, 37, 37, 0.43);
+}
+
+.slot img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+
+/* dito */
+#hud {
+  height: 90px;
+  border: 2px inset green;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-image: linear-gradient(to top, rgb(0, 0, 0),green);
+  border-radius: 40px;
+}
+
+#hud .left-hud {
+  border: 1px outset black;
+  border-block: none;
+  border-left: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 32px;
+}
+
+#credits-container {
+  text-align: center;
+}
+
+#credits-container p:nth-child(1) {
+  color: orange;
+  font-size: var(--fs-20px);
+  font-weight: var(--fw-bold);
+}
+
+#winning-display {
+  /* border: 1px outset black; */
+  /* border-block: none; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#winning-display p:nth-child(1) {
+  color: orangered;
+  font-size: var(--fs-24px);
+  font-weight: var(--fw-bold);
+}
+
+.right-hud {
+  border: 1px outset black;
+  border-block: none;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 32px;
+}
+
+#bet-controller {
+  background-image: linear-gradient(to bottom, rgba(0, 251, 0, 0.218), rgb(0, 0, 0));
+  display: flex;
+  justify-content: center;
+  min-width: 200px;
+  height: 70px;
+  border-radius: 40px;
+}
+
+.bet-container {
+  width: 100px;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  border-block: none;
+}
+
+
+.bet-container p:nth-child(2) {
+  color: orange;
+  font-size: var(--fs-20px);
+  font-weight: var(--fw-bold);
+}
+
+#increase_bet_btn {
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+#decrease_bet_btn {
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  padding: 20px;
+  cursor: pointer;
+
+}
+
+#fast_spin_animation_btn {
+  background-color: rgba(255, 166, 0, 0.718);
+  padding-top: 8px;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+#play-btn {
+  background-color: orange;
+  padding-block-start: 6px;
+  border-radius: 4px;
+}
+/* MODAL POPUPS */
+
+.modal-popup {
+  background-color: rgba(255, 68, 0, 0.837);
+  border-radius: 8px;
+  box-shadow: 0 0 8px 1px;
+  position: fixed;
+  top: 250px;
+  bottom: 250px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 500px; 
+  display: none;
+}
+
+.modal-popup .modal-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(60px, 1fr));
+  padding: 1em;
+  gap: 8px;
+}
+
+.modal-header {
+  padding: 1em;
+}
+
+.modal-header #modal-exit-btn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content .betvalue {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.modal-content .betvalue:hover {
+  transform: scaleX(1.05);
+}
