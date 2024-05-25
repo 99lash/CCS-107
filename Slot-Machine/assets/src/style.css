@@ -84,7 +84,7 @@ header .compact-container button {
 #reset_demo:hover .tooltip, 
 #minmax_screen:hover .tooltip, 
 #fast_spin_animation_btn:hover .tooltip,
-#play-btn:hover .tooltip,
+#play-btn:hover .tooltip, #info-btn:hover .tooltip,
 .bet-container:hover .tooltip {
   display: block;
 }
@@ -121,7 +121,6 @@ main {
   object-fit: contain;
 }
 
-/* dito */
 #hud {
   height: 90px;
   border: 2px inset green;
@@ -141,6 +140,11 @@ main {
   column-gap: 32px;
 }
 
+#info-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 #credits-container {
   text-align: center;
 }
@@ -196,7 +200,7 @@ main {
 }
 
 
-.bet-container p:nth-child(2) {
+.bet-container p:nth-child(1) {
   color: orange;
   font-size: var(--fs-20px);
   font-weight: var(--fw-bold);
