@@ -14,8 +14,6 @@
     <div id="calculator">
       <div class="screen-display"> 
         <input type="text" id="display" value="0" readonly>
-        <!-- <div class="screen-last" id="latestScreenValue"></div>
-        <div class="screen-current" id="currentScreenValue">0</div> -->
       </div>
       <div class="input-keys">
           <input type="button" value="AC" class="setmod" onclick="allClear()">
@@ -37,7 +35,7 @@
           <input type="button" value="&plus;" class="operator" onclick="displayInputOp('+')">
           <input type="button" value="+/-" onclick="switchSign()">
           <input type="button" value="0" onclick="displayInputNum('0')">
-          <input type="button" value="." onclick="displayInputNum('.')">
+          <input type="button" value="." onclick="pointBtn('.')">
           <input type="button" value="&equals;" id="equals" class="operator"  onclick="calculate()">
         </div>
       </div>

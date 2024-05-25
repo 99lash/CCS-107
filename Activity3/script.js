@@ -1,53 +1,81 @@
 /* REMAINING AGENDA
-  1. Operator Converter Function 
-   (+, -, *, /) ===> (+, -, ×, ÷/)
-  
-  2. Find & Fix Bugs/Errors
+  1. convert operators into [+, -, x, ÷]
+  2. no multiple operators after operator [3+++, 4---5, 5****6]
 */
 
-let display = document.querySelector("#display");
-let  operatorButtons = document.getElementsByClassName("operator"); 
+let screenDisplay = document.querySelector("#display");
+let operatorButtons = document.getElementsByClassName("operator"); 
+let lastOperator = null;
+let lastOperand = null;
+let lastEval = '';
 
 // display input numbers
 function displayInputNum(btnValue) {
-  if (btnValue === '.' && display.value.includes('.')) return;
-  return (display.value === '0' || display.value === 'Error') ?  display.value = btnValue : display.value += btnValue;
+  lastOperand = btnValue;
+  if (screenDisplay.value === '0' || screenDisplay.value === 'Error' || lastEval ) {
+    lastEval = '';
+    screenDisplay.value = btnValue;
+  }
+  else
+    screenDisplay.value += btnValue;
 }
 
 // display input operators
 function displayInputOp(inputOp) {
-  display.value += inputOp
+  lastOperator = inputOp;
+  screenDisplay.value += inputOp;
 }
+
+// display point .
+function pointBtn(btnValue) {
+  if (btnValue === '.' && screenDisplay.value.includes('.')) return;
+  
+  (screenDisplay.value === '0' || screenDisplay.value === 'Error' || screenDisplay.value === 'NaN') ? screenDisplay.value = btnValue : screenDisplay.value += btnValue;
+}
+
 
 // clear all 
 function allClear() {
-  display.value = '0';
+  screenDisplay.value = 0;
 }
 
 // clear recent entry
 function clearEntry() { 
-  if (display.value !== '0') 
-    display.value = display.value.toString().slice(0, -1);
+  if ( screenDisplay.value === 'NaN' || screenDisplay === 'Error')
+    screenDisplay.value = 0;
 
-  if (display.value === '' || display.value === '+' ||  display.value === '-' ||  display.value === '*' ||  display.value === '/')
-  display.value = display.value = '0';
+  if (screenDisplay.value !== '0' ) 
+    screenDisplay.value = screenDisplay.value.toString().slice(0, -1);
+
+  switch (operatationScreenDisplay.value) {
+    
+  }
 }
 
 // performs calculation
-function calculate() {
-  try {
-    display.value = eval(display.value);
-  } catch (error) {
-    display.value = "Error";
+function calculate(){
+  if (eval(screenDisplay.value) == eval(lastEval)){
+      screenDisplay.value += lastOperator;
+      screenDisplay.value += lastOperand;
+      screenDisplay.value = eval(screenDisplay.value);
+  }else{
+      try{
+          screenDisplay.value = eval(screenDisplay.value);
+          lastEval = eval(screenDisplay.value);
+      }
+      catch(error){
+          screenDisplay.value = 'Error';
+      }
   }
 }
 
 // convert to point decimal
 function toPercentDec() {
-  display.value = (display.value/100); 
+  screenDisplay.value = (screenDisplay.value/100); 
 }
 
 // switch sign to positive or negative
 function switchSign() {
-  display.value = display.value - (display.value * 2);
+  screenDisplay.value = screenDisplay.value - (screenDisplay.value * 2);
+  // (screenDisplay.value < 0) ? screenDisplay.value = Math.abs(screenDisplay.value) : screenDisplay.value = (-screenDisplay.value);
 }
