@@ -12,8 +12,8 @@
   1. PLAYER WINNINGS (WINS FROM 2 SLOTS & 3 SLOTS).           //done 
   2. - + BUTTONS ON PLACE BET.                                //done
   3. BET MENU MODAL DIALOG.                                   //done
-  4. BETTING AND REWARDS INFORMATION (modal).                 //            
-  5. MAXIMIZE & MINIMIZE SCREEN WINDOW.                       //        
+  4. BETTING AND REWARDS INFORMATION (modal).                 //        
+  5. MAXIMIZE & MINIMIZE SCREEN WINDOW.                       //done   
   6. RESET DEMO GAME BUTTON (if localStorage is implemented). //done
 */
 
@@ -222,9 +222,10 @@ playBtn.addEventListener('click', () => {
     return;
   }
   else {
-    player.credits -= player.bet.toFixed(2);
+    player.credits -= player.bet;
     player.winnings -= player.winnings.toFixed(2);
     updateCredits();
+    savePlayerData();
     let spinSlots = setInterval(() => {
       if (tempPlay <= 10) {
         tempPlay++;
@@ -235,7 +236,6 @@ playBtn.addEventListener('click', () => {
         updateBets();
         updateCredits();
         updateWinnings();
-        savePlayerData();
         tempPlay = 1;
         if (isPlayerWin) {
           console.log(isPlayerWin);

@@ -1,16 +1,20 @@
-/* 
-1. Deposit money
-2. Collect bet amount
-3. Spin the slot machine [Manual/Auto] Spin  
-4. Check if user won
-5. Release the user winnings
-*/
+const screen = document.getElementById('minmax_screen');
+screen.addEventListener('click', toggleFullScreenMode);
 
-let resetDemo = false;
-let screenMaximize = false;
+function toggleFullScreenMode() {
+  if (document.fullscreenElement == null) {
+      document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+  }
+}
 
-const resetDemoBtn = document.getElementById('reset_demo');
-const screenMinMaxBtn = document.getElementById('minmax_screen');
+//check
+// document.addEventListener('fullscreenchange', function () {
+//   if (document.fullscreenElement != null) {
+//       console.log('Entered fullscreen mode');
+//   } else {
+//       console.log('Exited fullscreen mode');
+//   }
+// });
 
-resetDemoBtn.style.border = '1px solid green'; //test
-screenMinMaxBtn.style.border = '1px solid green'; //test
