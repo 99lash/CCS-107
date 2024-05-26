@@ -8,10 +8,6 @@
 6. Repeat
 */
 
-/* ERRORS TO FIXED 
-  1.
-*/
-
 /* FEATURES TO ADD sorted from most to less priority 
   1. PLAYER WINNINGS (WINS FROM 2 SLOTS & 3 SLOTS).           //done 
   2. - + BUTTONS ON PLACE BET.                                //done
@@ -21,9 +17,14 @@
   6. RESET DEMO GAME BUTTON (if localStorage is implemented). //done
 */
 
+/* ERRORS TO FIXED 
+  1.
+*/
+
+
 /* BUGS TO FIXED
   1. Stop player from spinning/rolling the slot during rolling. //done
-  2. 
+  2. ?
 */
 
 let player = {
@@ -101,16 +102,19 @@ openBetMenu.addEventListener('click', () => {
   // console.log(betMenuModal.style.display);
 });
 
+//close bet menu modal by clicking outside the modal
 window.addEventListener('click', function(event) {
   if (event.target <= betMenuModal) {
     betMenuModal.style.display = 'none';
   }
 });
 
+//close bet menu modal by clicking exit button
 closeBetMenu.addEventListener('click', () => {
   betMenuModal.style.display = 'none';
 })
 
+//render bet from bet menu modal
 Array.from(betValues).forEach(betValue => {
   betValue.addEventListener('click', () => {
     player.bet = parseFloat(betValue.value);
@@ -189,13 +193,13 @@ fastSpinBtn.addEventListener('click', () => {
   temp++;
   if (temp % 2 == 0) {
     dynamicInterval = 250;
-    fastSpinBtn.style.opacity = '100%';
+    fastSpinBtn.style.backgroundColor = '#fb9f05';
   } else {
     dynamicInterval = 10; 
-    fastSpinBtn.style.opacity = '70%'
+    fastSpinBtn.style.backgroundColor = '#f87004';
   }
-  console.log(dynamicInterval);
-  console.log(temp);
+  // console.log(dynamicInterval);
+  // console.log(temp);
 })
 
 //Spin slot machine [Manual]
@@ -206,21 +210,21 @@ playBtn.addEventListener('click', () => {
     return;
   }
   let isPlayerWin = false;
-  
   betMenuModal.style.display = 'none';
+  
   if (player.bet < 10) {
     alert('Insufficient bet.');
     return;
   }
 
-  if (player.credits < 1) {
+  if (player.credits < 1 || player.credits < player.bet) {
     alert('Insufficient credits balance.');
     return;
-  } else {
-    player.credits -= player.bet;
+  }
+  else {
+    player.credits -= player.bet.toFixed(2);
     player.winnings -= player.winnings.toFixed(2);
     updateCredits();
-    savePlayerData();
     let spinSlots = setInterval(() => {
       if (tempPlay <= 10) {
         tempPlay++;
@@ -231,6 +235,7 @@ playBtn.addEventListener('click', () => {
         updateBets();
         updateCredits();
         updateWinnings();
+        savePlayerData();
         tempPlay = 1;
         if (isPlayerWin) {
           console.log(isPlayerWin);

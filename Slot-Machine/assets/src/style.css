@@ -49,14 +49,17 @@ body {
 /* 
 ---- HEADER CONTENTS ----  
 */
-header {
-  background-color: rgba(0, 0, 0, 0.363);
-  border: 1px outset green;
-}
 
 .compact-container {
   width: 90%;
   margin: 0 auto;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 header .compact-container {
@@ -224,7 +227,7 @@ main {
 }
 
 #fast_spin_animation_btn {
-  background-color: rgba(255, 166, 0, 0.718);
+  background-color: #fb9f05;
   padding-top: 8px;
   border-radius: 24px;
   cursor: pointer;
