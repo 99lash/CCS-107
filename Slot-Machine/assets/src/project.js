@@ -1,3 +1,4 @@
+
 /*  BASIC FLOW ALGORITHM PROJECT
 
 1. Deposit money
@@ -80,8 +81,9 @@ let betValues = document.getElementsByClassName('betvalue');
 let randomSlot1;
 let randomSlot2;
 let randomSlot3;
+let betRangeIndex = 0;
 
-//load player data when the page loads
+//load player data when the page load
 loadPlayerData();
 updateCredits();
 updateBets();
@@ -95,6 +97,11 @@ resetDemoBtn.addEventListener('click', () => {
   updateBets();
   updateWinnings();
   savePlayerData();
+  swal({
+    title: 'Game demo has been reset',
+    text: `Your demo credits are now: ${player.credits.toFixed(2)}`,
+    icon: 'success'
+  })
 })
 
 openBetMenu.addEventListener('click', () => {
@@ -120,15 +127,21 @@ Array.from(betValues).forEach(betValue => {
     player.bet = parseFloat(betValue.value);
     updateBets();
     savePlayerData();
+    let handIndex = betPools.indexOf(player.bet);
+    betRangeIndex = handIndex.toPrecision(1);
+    console.log(betRangeIndex);
   });
 });
 
 //increment bets
-let betRangeIndex = 0;
 betIncrementBtn.addEventListener('click', () => {
   betRangeIndex++;
   if (betRangeIndex > 9) {
-    alert('You have reached bet limit');
+    swal({
+      title: `Max Value Limit Reached`,
+      text: `Please place a bet not more than 1000.00.`,
+      icon: `warning`
+    });
     betRangeIndex = 9;
   }
   player.bet = betPools[betRangeIndex].toFixed(2);
@@ -141,7 +154,11 @@ betDecrementBtn.addEventListener('click', () => {
   betRangeIndex--;
   if (betRangeIndex < 0) {
     betRangeIndex = 0;
-    alert('Bets cannot be 0 or less');
+    swal({
+      title: `Minimum Bet Value Limit Reached`,
+      text: `Please place a bet more than 10.00.`,
+      icon: `warning`
+    });
   }
   player.bet = betPools[betRangeIndex].toFixed(2);
   updateBets();
@@ -150,13 +167,18 @@ betDecrementBtn.addEventListener('click', () => {
 
 //update credits
 function updateCredits() {
-  displayCredits.textContent = player.credits.toFixed(2);
+  displayCredits.textContent = parseFloat(player.credits).toFixed(2);
 }
 
 //update bets
 function updateBets() {
-  displayBets.textContent = player.bet;
+  let tempHand = player.bet;  
+  if (typeof tempHand !== 'number') {
+    tempHand = parseFloat(tempHand);
+  }
+  displayBets.textContent = tempHand.toFixed(2);
 }
+
 
 //update winnings
 function updateWinnings() {
@@ -177,8 +199,7 @@ function updateReels() {
 //check if player won
 function checkPlayerWin() {
   if (randomSlot1 === randomSlot2 && randomSlot1 === randomSlot3) {
-    alert(`You win: ${(player.bet * 2)}`);
-    player.winnings += (player.bet * 2);
+    player.winnings += (player.bet * 3);
     player.credits += player.winnings;
     savePlayerData();
     return true;
@@ -206,19 +227,31 @@ fastSpinBtn.addEventListener('click', () => {
 let tempPlay = 1;
 playBtn.addEventListener('click', () => {  
   if (tempPlay != 1) {
-    alert('Please wait a moment to roll again.')
+    swal({
+      title: 'WARNING',
+      text: `Please wait a moment to spin again or enable skip animation to prevent this from happening`,
+      icon: 'warning'
+    })
     return;
   }
   let isPlayerWin = false;
   betMenuModal.style.display = 'none';
   
   if (player.bet < 10) {
-    alert('Insufficient bet.');
+    swal({
+      title: 'INSUFFICIENT BET',
+      text: `Please place a bet.`,
+      icon: 'info'
+    })
     return;
   }
 
   if (player.credits < 1 || player.credits < player.bet) {
-    alert('Insufficient credits balance.');
+    swal({
+      title: 'Insufficient Credits',
+      text: `Please place a bet not higher than on your based credits or reset the game demo to load demo credits.`,
+      icon: 'info'
+    })
     return;
   }
   else {
@@ -238,7 +271,12 @@ playBtn.addEventListener('click', () => {
         updateWinnings();
         tempPlay = 1;
         if (isPlayerWin) {
-          console.log(isPlayerWin);
+          swal({
+            title: `You've won: ${player.winnings}`,
+            text: `Click ok or anywhere to continue`,
+            icon: 'success'
+          })
+          // console.log(isPlayerWin);
         }
       }
     }, dynamicInterval);
