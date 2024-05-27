@@ -1,6 +1,5 @@
 :root {
   --typeface-default: Poppins, sans-serif;
-  --typeface-off-1: 'Courier New', Courier, monospace;
 
   --fs-13px: 0.8125rem;
   --fs-14px: 0.875rem;
@@ -231,6 +230,7 @@ main {
   padding-top: 8px;
   border-radius: 24px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 #play-btn {
@@ -241,9 +241,9 @@ main {
 /* MODAL POPUPS */
 
 .modal-popup {
-  background-color: rgba(255, 68, 0, 0.837);
+  background-color: rgba(1, 97, 1, 0.9);
   border-radius: 8px;
-  box-shadow: 0 0 8px 1px;
+  box-shadow: 0 0 8px 1px rgba(33, 33, 33, 0.154);
   position: fixed;
   top: 250px;
   bottom: 250px;
@@ -266,19 +266,32 @@ main {
 }
 
 .modal-header #modal-exit-btn {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: all 0.20s;
+}
+
+.modal-header #modal-exit-btn:hover {
+  color: white;
+  opacity: 1;
 }
 
 .modal-content .betvalue {
   background-color: transparent;
-  color: white;
-  border: 1px solid white;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
   cursor: pointer;
+  transition: all 0.20s;
 }
 
 .modal-content .betvalue:hover {
-  transform: scaleX(1.05);
+  opacity: 1;
+}
+
+.modal-content .betvalue:hover {
+  transform: scaleX(1.02);
 }
