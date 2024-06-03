@@ -20,15 +20,14 @@ body {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  max-width: 700px;
+  max-width: 500px;
   width: 100%;
   text-align: center;
 }
 
 .container-header {
   background-color: #4CAF50;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 10px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   color: white;
@@ -61,16 +60,12 @@ button:hover {
 }
 
 #quiz-page, #result-page {
+  padding: 20px;
   display: none;
 }
 
-#quiz-page .container-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 #question-number {
+  margin-bottom: 20px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -99,9 +94,10 @@ button:hover {
 }
 
 #timer {
+  margin-bottom: 20px;
   font-size: 16px;
-  font-weight: 500;
-  color: #f4f4f4;
+  font-weight: bold;
+  color: #ff5722;
 }
 
 #result {

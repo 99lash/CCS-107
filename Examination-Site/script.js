@@ -1,185 +1,158 @@
 const quizData = [
-  // Add your 30 questions here (same as before)
-  //Question 1
-  {
-    question: "Which language runs in a web browser?",
-    choices: ["Java", "C", "Python", "JavaScript"],
-    correct: 3
-  },
-  //Question 2
-  {
-    question: "What does 'CSS' stand for?",
-    choices: ["Counter Strike: Source", "Cascading Style Sheets", "Corrective Style Syntax", "Computer Style Sections"],
-    correct: 1
-  },
-  //Question 3
-  {
-    question: "What is the purpose of the 'alt' attribute in an img tag?",
-    choices: ["To provide an alternative text", "To change the image source", "To make the image load faster", "To style the image"],
-    correct: 0
-  },
-  //Question 4
-  {
-    question: "What is the method to add an element at the end of an array?",
-    choices: ["push()", "pop()", "shift()", "unshift()"],
-    correct: 0
-  },
-  //Question 5
-  {
-    question: "Which object is used to store and manipulate text usually in multiples of 16-bit units?",
-    choices: ["String", "Character", "StringBuilder", "TextBlock"],
-    correct: 0
-  },
-  //Question 6
+  // HTML Questions
   {
     question: "What does HTML stand for?",
-    choices: ["Hyper Trainer Marking Language", "Hyper Text Markup Language", "Hyper Text Markdown Language", "Hyper Text Marking Language"],
-    correct: 1
-  },
-  //Question 7
-  {
-    question: "What year was JavaScript created?",
-    choices: ["1995", "1994", "1993", "1996"],
+    choices: ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Tag Markup Language"],
     correct: 0
   },
-  //Question 8
   {
-    question: "Which tool can you use to ensure code quality?",
-    choices: ["Angular", "jQuery", "RequireJS", "ESLint"],
+    question: "Who is making the Web standards?",
+    choices: ["Mozilla", "Microsoft", "Google", "The World Wide Web Consortium"],
     correct: 3
   },
-  //Question 9
   {
-    question: "What is 'this' keyword in JavaScript?",
-    choices: ["Refers to the current object", "Refers to the previous object", "Refers to the global object", "Refers to the new object being created"],
+    question: "Choose the correct HTML element for the largest heading:",
+    choices: ["<h1>", "<heading>", "<h6>", "<head>"],
     correct: 0
   },
-  //Question 10
   {
-    question: "How do you declare a JavaScript variable?",
-    choices: ["var name", "variable name", "v name", "int name"],
+    question: "What is the correct HTML element for inserting a line break?",
+    choices: ["<br>", "<lb>", "<break>", "<line>"],
     correct: 0
   },
-  //Question 11
   {
-    question: "Which statement creates a new object?",
-    choices: ["var obj = new Object()", "var obj = Object()", "var obj = new Object[]", "var obj = new Array()"],
-    correct: 0
-  },
-  //Question 12
-  {
-    question: "How to write an IF statement in JavaScript?",
-    choices: ["if i = 5", "if i == 5 then", "if (i == 5)", "if i = 5 then"],
+    question: "What is the correct HTML for adding a background color?",
+    choices: ["<body bg='yellow'>", "<background>yellow</background>", "<body style='background-color: yellow;'>", "<bgcolor='yellow'>"],
     correct: 2
   },
-  //Question 13
   {
-    question: "How does a WHILE loop start?",
-    choices: ["while (i <= 10; i++)", "while (i <= 10)", "while i = 1 to 10", "while (i++ < 10)"],
-    correct: 1
+    question: "Choose the correct HTML element to define important text:",
+    choices: ["<b>", "<i>", "<important>", "<strong>"],
+    correct: 3
   },
-  //Question 14
   {
-    question: "How can you add a comment in a JavaScript?",
-    choices: ["*This is a comment", "//This is a comment", "'This is a comment", "(This is a comment)"],
-    correct: 1
-  },
-  //Question 15
-  {
-    question: "What is the correct way to write a JavaScript array?",
-    choices: ["var colors = (1:'red', 2:'green', 3:'blue')", "var colors = 'red', 'green', 'blue'", "var colors = ['red', 'green', 'blue']", "var colors = (1 = 'red', 2 = 'green', 3 = 'blue')"],
-    correct: 2
-  },
-  //Question 16
-  {
-    question: "Which event occurs when the user clicks on an HTML element?",
-    choices: ["onmouseclick", "onclick", "onchange", "onmouseover"],
-    correct: 1
-  },
-  //Question 17
-  {
-    question: "How do you find the number with the highest value of x and y?",
-    choices: ["Math.ceil(x, y)", "Math.max(x, y)", "Math.high(x, y)", "Math.top(x, y)"],
-    correct: 1
-  },
-  //Question 18
-  {
-    question: "What method is used to round a number to the nearest integer?",
-    choices: ["Math.round()", "Math.rnd()", "Math.nearest()", "Math.fix()"],
+    question: "Choose the correct HTML element to define emphasized text:",
+    choices: ["<em>", "<i>", "<italic>", "<strong>"],
     correct: 0
   },
-  //Question 19
   {
-    question: "What does JSON stand for?",
-    choices: ["JavaScript Object Notation", "Java Standard Output Network", "JavaScript Output Naming", "Java Source Open Network"],
-    correct: 0
-  },
-  //Question 20
-  {
-    question: "What is a correct syntax to output 'Hello World' in JavaScript?",
-    choices: ["print('Hello World')", "console.log('Hello World')", "echo 'Hello World'", "response.write('Hello World')"],
-    correct: 1
-  },
-  //Question 21
-  {
-    question: "Which HTML tag is used to define an internal style sheet?",
-    choices: ["script", "style", "css", "link"],
-    correct: 1
-  },
-  //Question 22
-  {
-    question: "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
-    choices: ["title", "src", "alt", "longdesc"],
+    question: "Which character is used to indicate an end tag?",
+    choices: ["<", "*", "/", "^"],
     correct: 2
   },
-  //Question 23
+  {
+    question: "How can you make a numbered list?",
+    choices: ["<ul>", "<dl>", "<ol>", "<list>"],
+    correct: 2
+  },
+  {
+    question: "How can you make a bulleted list?",
+    choices: ["<ul>", "<ol>", "<dl>", "<list>"],
+    correct: 0
+  },
+
+  // CSS Questions
+  {
+    question: "What does CSS stand for?",
+    choices: ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+    correct: 1
+  },
+  {
+    question: "What is the correct syntax for referring to an external style sheet?",
+    choices: ["<style src='mystyle.css'>", "<stylesheet>mystyle.css</stylesheet>", "<link rel='stylesheet' type='text/css' href='mystyle.css'>", "<link src='stylesheet' type='text/css' href='mystyle.css'>"],
+    correct: 2
+  },
+  {
+    question: "Which HTML attribute is used to define inline styles?",
+    choices: ["styles", "style", "class", "font"],
+    correct: 1
+  },
+  {
+    question: "Which is the correct CSS syntax?",
+    choices: ["body:color=black;", "{body;color:black;}", "body {color: black;}", "{body:color=black;}"],
+    correct: 2
+  },
+  {
+    question: "How do you insert a comment in a CSS file?",
+    choices: ["/* this is a comment */", "// this is a comment", "<!-- this is a comment -->", "' this is a comment"],
+    correct: 0
+  },
+  {
+    question: "Which property is used to change the background color?",
+    choices: ["color", "bgcolor", "background-color", "bg-color"],
+    correct: 2
+  },
+  {
+    question: "How do you add a background color for all <h1> elements?",
+    choices: ["h1 {background-color:#FFFFFF;}", "h1.all {background-color:#FFFFFF;}", "all.h1 {background-color:#FFFFFF;}", "h1 {bgcolor:#FFFFFF;}"],
+    correct: 0
+  },
+  {
+    question: "Which CSS property is used to change the text color of an element?",
+    choices: ["fgcolor", "color", "text-color", "font-color"],
+    correct: 1
+  },
+  {
+    question: "Which CSS property controls the text size?",
+    choices: ["font-size", "text-size", "font-style", "text-style"],
+    correct: 0
+  },
+  {
+    question: "How do you display hyperlinks without an underline?",
+    choices: ["a {text-decoration:none;}", "a {underline:none;}", "a {text-decoration:no-underline;}", "a {decoration:no-underline;}"],
+    correct: 0
+  },
+
+  // JavaScript Questions
+  {
+    question: "Inside which HTML element do we put the JavaScript?",
+    choices: ["<js>", "<script>", "<javascript>", "<scripting>"],
+    correct: 1
+  },
+  {
+    question: "Where is the correct place to insert a JavaScript?",
+    choices: ["The <head> section", "The <body> section", "Both the <head> section and the <body> section are correct", "The <footer> section"],
+    correct: 2
+  },
+  {
+    question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
+    choices: ["<script href='xxx.js'>", "<script name='xxx.js'>", "<script src='xxx.js'>", "<script file='xxx.js'>"],
+    correct: 2
+  },
+  {
+    question: "How do you write 'Hello World' in an alert box?",
+    choices: ["msgBox('Hello World');", "alert('Hello World');", "msg('Hello World');", "alertBox('Hello World');"],
+    correct: 1
+  },
   {
     question: "How do you create a function in JavaScript?",
     choices: ["function myFunction()", "function:myFunction()", "function = myFunction()", "function => myFunction()"],
     correct: 0
   },
-  //Question 24
   {
-    question: "Which of the following function of Array object adds and/or removes elements from an array?",
-    choices: ["toSource()", "sort()", "splice()", "unshift()"],
+    question: "How do you call a function named 'myFunction'?",
+    choices: ["call myFunction()", "call function myFunction()", "myFunction()", "myFunction.call()"],
     correct: 2
   },
-  //Question 25
   {
-    question: "How do you declare a JavaScript variable?",
-    choices: ["v carName;", "var carName;", "variable carName;", "vec carName;"],
+    question: "How to write an IF statement in JavaScript?",
+    choices: ["if i == 5 then", "if i = 5 then", "if (i == 5)", "if (i = 5)"],
+    correct: 2
+  },
+  {
+    question: "How does a WHILE loop start?",
+    choices: ["while i = 1 to 10", "while (i <= 10; i++)", "while (i <= 10)", "while (i < 10; i++)"],
+    correct: 2
+  },
+  {
+    question: "How can you add a comment in JavaScript?",
+    choices: ["'This is a comment", "<!-- This is a comment -->", "// This is a comment", "/* This is a comment */"],
+    correct: 2
+  },
+  {
+    question: "What is the correct way to write a JavaScript array?",
+    choices: ["var colors = 'red', 'green', 'blue'", "var colors = ['red', 'green', 'blue']", "var colors = (1:'red', 2:'green', 3:'blue')", "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')"],
     correct: 1
-  },
-  //Question 26
-  {
-    question: "What will 'console.log( typeof [] );' output in the console?",
-    choices: ["object", "array", "null", "undefined"],
-    correct: 0
-  },
-  //Question 27
-  {
-    question: "Which operator is used to assign a value to a variable?",
-    choices: ["=", "==", ":", "!="],
-    correct: 0
-  },
-  //Question 28
-
-  {
-    question: "Which method is used to remove the last element from an array and return that element?",
-    choices: ["last()", "pop()", "push()", "end()"],
-    correct: 1
-  },
-  //Question 29
-  {
-    question: "Which statement creates a new object using the 'Person' constructor?",
-    choices: ["var person = new Person();", "var person = create Person();", "var person = construct Person();", "var person = new create(Person);"],
-    correct: 0
-  },
-  //Question 30
-  {
-    question: "What is 'this' keyword in JavaScript?",
-    choices: ["Refers to the current object", "Refers to the previous object", "Refers to the variable that is local to a function", "Refers to the global variable"],
-    correct: 0
   }
 ];
 
@@ -194,16 +167,36 @@ let selectionPage = document.getElementById('selection-page');
 let quizPage = document.getElementById('quiz-page');
 let resultPage = document.getElementById('result-page');
 
+//to prevent rendering the choices into html element 
+// function escapeHTML(str) {
+//   return str.replace(/[&<>"']/g, function (match) {
+//     const escapeMap = {
+//       '&': '&amp;',
+//       '<': '&lt;',
+//       '>': '&gt;',
+//       '"': '&quot;',
+//       "'": '&#39;'
+//     };
+//     return escapeMap[match];
+//   });
+// }
+
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 function startQuiz(numQuestions) {
+  // if the user has already submitted the quiz, this will redirect them to results page
   if (localStorage.getItem('quizSubmitted')) {
-      // User has already submitted the quiz, redirect to results page
-      selectionPage.classList.remove('active');
-      selectionPage.style.display = 'none';
-      resultPage.classList.add('active');
-      resultPage.style.display = 'block';
-      const score = localStorage.getItem('quizScore');
-      document.getElementById('result').textContent = `You scored ${score}%`;
-      return;
+    selectionPage.classList.remove('active');
+    selectionPage.style.display = 'none';
+    resultPage.classList.add('active');
+    resultPage.style.display = 'block';
+    const score = localStorage.getItem('quizScore');
+    document.getElementById('result').textContent = `You scored ${score}%`;
+    return;
   }
 
   selectedQuestions = quizData.slice(0, numQuestions);
@@ -216,114 +209,121 @@ function startQuiz(numQuestions) {
   quizPage.style.display = 'block';
   displayQuestion();
   startTimer();
+
+  return numQuestions.length;
 }
 
+//displays the questions and its choices
 function displayQuestion() {
   const questionData = selectedQuestions[currentQuestionIndex];
   document.getElementById('question-number').textContent = `Question ${currentQuestionIndex + 1}`;
-  const questionContainer = document.getElementById('question-container');
-  questionContainer.innerHTML = `
-      <p class="question">${questionData.question}</p>
-      <div class="options">
-      ${questionData.choices.map((choice, index) => `
-          <div class="option">
-              <input type="radio" id="choice-${index}" name="choice" value="${index}" ${answers[currentQuestionIndex] === index ? 'checked' : ''}>
-              <label for="choice-${index}">${choice}</label>
-          </div>
-      `).join('')}
-      </div>
-  `;
-}
+  document.querySelector('.question').innerHTML = escapeHTML(questionData.question);
+  questionData.choices.forEach((choice, index) => {
+    document.getElementById(`choice-${index}`).checked = answers[currentQuestionIndex] === index;
+    document.querySelector(`label[for="choice-${index}"]`).innerHTML = escapeHTML(choice);
+  });
+} 
 
+//events handler
+// document.getElementById('start-quiz').addEventListener('click', startQuiz);
 document.getElementById('prev-button').addEventListener('click', prevQuestion);
 document.getElementById('next-button').addEventListener('click', nextQuestion);
-document.getElementById('skip-button').addEventListener('click', skipQuestion);
 document.getElementById('submit-button').addEventListener('click', finishQuiz);
 document.getElementById('retry-button').addEventListener('click', retryQuiz);
+document.getElementById('retake-button').addEventListener('click', retakeQuiz);
 
 function prevQuestion() {
   saveAnswer();
   if (currentQuestionIndex > 0) {
-      currentQuestionIndex--;
-      displayQuestion();
+    currentQuestionIndex--;
+    displayQuestion();
   }
 }
+
 
 function nextQuestion() {
   saveAnswer();
   if (currentQuestionIndex < selectedQuestions.length - 1) {
-      currentQuestionIndex++;
-      displayQuestion();
+    currentQuestionIndex++;
+    displayQuestion();
   } else {
-      goToSkippedOrFinish();
+    goToSkippedOrFinish();
   }
-}
-
-function skipQuestion() {
-  if (!skippedQuestions.includes(currentQuestionIndex)) {
-      skippedQuestions.push(currentQuestionIndex);
-  }
-  nextQuestion();
 }
 
 function goToSkippedOrFinish() {
   if (skippedQuestions.length > 0) {
-      currentQuestionIndex = skippedQuestions.shift();
-      displayQuestion();
+    currentQuestionIndex = skippedQuestions.shift();
+    displayQuestion();
   } else {
-      finishQuiz();
+    finishQuiz();
   }
+  console.log(skippedQuestions.length);
 }
 
+//get the user's answer
 function saveAnswer() {
   const selectedChoice = document.querySelector('input[name="choice"]:checked');
   if (selectedChoice) {
-      answers[currentQuestionIndex] = parseInt(selectedChoice.value);
+    answers[currentQuestionIndex] = parseInt(selectedChoice.value);
   }
 }
 
+//timer
 function startTimer() {
   timerDuration = 600;
   const timerElement = document.getElementById('timer');
   displayTime(timerElement, timerDuration);
 
   timer = setInterval(() => {
-      timerDuration--;
-      displayTime(timerElement, timerDuration);
-      if (timerDuration <= 0) {
-          clearInterval(timer);
-          finishQuiz();
-      }
+    timerDuration--;
+    displayTime(timerElement, timerDuration);
+    if (timerDuration <= 0) {
+      clearInterval(timer);
+      finishQuiz();
+    }
   }, 1000);
 }
 
 function displayTime(element, duration) {
   const minutes = Math.floor(duration / 60);
   const seconds = duration % 60;
-  element.textContent = `Time: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  element.textContent = `Remaining Time: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
+//finish up the quiz
 function finishQuiz() {
   clearInterval(timer);
   const correctAnswers = answers.reduce((acc, answer, index) => {
-      return acc + (answer === selectedQuestions[index].correct ? 1 : 0);
+    return acc + (answer === selectedQuestions[index].correct ? 1 : 0);
   }, 0);
   const score = Math.round((correctAnswers / selectedQuestions.length) * 100);
   localStorage.setItem('quizScore', score);
   localStorage.setItem('quizSubmitted', true);
 
-  quizPage.classList.remove('active')
+  quizPage.classList.remove('active');
   resultPage.classList.add('active');
   quizPage.style.display = 'none';
-  resultPage.style.display = 'block'
+  resultPage.style.display = 'block';
   document.getElementById('result').textContent = `You scored ${score}%`;
+  // document.getElementById('result').textContent = `You scored: ${correctAnswers} out of ${selectedQuestions.length} Percentage Score: ${score}%`;
 }
 
+//retry the quiz
 function retryQuiz() {
-  let resultPage = document.getElementById('result-page');
-  let selectionPage = document.getElementById('selection-page');
   resultPage.classList.remove('active');
   selectionPage.classList.add('active');
   resultPage.style.display = 'none';
   selectionPage.style.display = 'block';
+}
+
+//retake the quiz
+function retakeQuiz() {
+  resultPage.classList.remove('active');
+  quizPage.classList.add('active');
+  resultPage.style.display = 'none';
+  quizPage.style.display = 'block';
+  localStorage.removeItem('quizScore');
+  localStorage.removeItem('quizSubmitted');
+  startQuiz(selectedQuestions.length);
 }

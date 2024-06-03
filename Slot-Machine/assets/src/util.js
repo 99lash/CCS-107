@@ -9,6 +9,7 @@ function toggleFullScreenMode() {
   }
 }
 
+
 //check
 // document.addEventListener('fullscreenchange', function () {
 //   if (document.fullscreenElement != null) {

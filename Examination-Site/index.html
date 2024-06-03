@@ -1,35 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examination Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <div id="selection-page" class="active">
-            <h2>Select Number of Questions</h2>
-            <button onclick="startQuiz(10)">10 Questions</button>
-            <button onclick="startQuiz(20)">20 Questions</button>
-            <button onclick="startQuiz(30)">30 Questions</button>
-        </div>
-
-        <div id="quiz-page">
-            <div id="timer"></div>
-            <div id="question-number"></div>
-            <div id="question-container"></div>
-            <button id="prev-button">Previous</button>
-            <button id="next-button">Next</button>
-            <button id="skip-button">Skip</button>
-            <button id="submit-button">Submit</button>
-        </div>
-
-        <div id="result-page">
-            <div id="result"></div>
-            <button id="retry-button">Go back</button>
-        </div>
+  <div class="container">
+    <div id="selection-page" class="active">
+      <div class="container-header">
+        <h3>QUIZ: HTML, CSS, and JS</h3>
+      </div>
+      <div class="container-content">
+        <button id="start-quiz" onclick="startQuiz(30)">Take the Quiz</button>
+      </div>
     </div>
-    <script src="script.js"></script>
+
+    <div id="quiz-page">
+      <div class="container-header">
+        <div id="question-number"></div>
+        <div id="timer"></div>
+      </div>
+      <div class="container-content">
+        <div id="question-container">
+          <p class="question"></p>
+          <div class="options">
+            <div class="option">
+              <input type="radio" id="choice-0" name="choice" value="0">
+              <label for="choice-0"></label>
+            </div>
+            <div class="option">
+              <input type="radio" id="choice-1" name="choice" value="1">
+              <label for="choice-1"></label>
+            </div>
+            <div class="option">
+              <input type="radio" id="choice-2" name="choice" value="2">
+              <label for="choice-2"></label>
+            </div>
+            <div class="option">
+              <input type="radio" id="choice-3" name="choice" value="3">
+              <label for="choice-3"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="prev-button">Previous</button>
+      <button id="next-button">Next</button>
+      <button id="submit-button">Submit</button>
+    </div>
+
+    <div id="result-page">
+      <div class="container-header">
+        <h3>QUIZ: HTML, CSS, and JS</h3>
+      </div>
+      <div id="result"></div>
+      <button id="retry-button">Go Back</button>
+      <button id="retake-button">Retake Quiz</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -111,7 +111,7 @@ openBetMenu.addEventListener('click', () => {
 
 //close bet menu modal by clicking outside the modal
 window.addEventListener('click', function(event) {
-  if (event.target <= betMenuModal) {
+  if (event.target == betMenuModal) {
     betMenuModal.style.display = 'none';
   }
 });
@@ -239,7 +239,7 @@ playBtn.addEventListener('click', () => {
   
   if (player.bet < 10) {
     swal({
-      title: 'INSUFFICIENT BET',
+      title: 'Insufficient Bet',
       text: `Please place a bet.`,
       icon: 'info'
     })
