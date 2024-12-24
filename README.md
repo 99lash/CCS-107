@@ -1,18 +1,15 @@
-# CCS-107-WEB-SYSTEM
-This is a web hosting repository for my CCS107 course subjects.
+# CCS 107: Web System and Technologies
+A web hosting repository for my CCS 107 activities, examinations, etc.
+<h2>Links:</h2>
 
-<h2>
-  Links: 
-</h2>
+- [Activity 1](https://99lash.github.io/CCS-107/Activity1/)
 
-[Activity 1](https://99lash.github.io/CCS-107-WEB-SYSTEM/Activity1/)
+- [Activity 2](https://99lash.github.io/CCS-107/Activity2/)
 
-[Activity 2](https://99lash.github.io/CCS-107-WEB-SYSTEM/Activity2/)
+- [Activity 3](https://99lash.github.io/CCS-107/Activity3/)
 
-[Activity 3](https://99lash.github.io/CCS-107-WEB-SYSTEM/Activity3/)
+- [Resume (Midterm Examination)](https://99lash.github.io/CCS-107/Practical-exam/)
 
-[Resume (Midterm Examination)](https://99lash.github.io/CCS-107-WEB-SYSTEM/Practical-exam/)
+- [Slot Machine(Final Examination)](https://99lash.github.io/CCS-107/Slot-Machine/)
 
-[Slot Machine(Final's Practical Exam)](https://99lash.github.io/CCS-107-WEB-SYSTEM/Slot-Machine/)
-
-[Examination Website(Final's Practical Exam)](https://99lash.github.io/CCS-107-WEB-SYSTEM/Examination-Site/)
+- [Examination Website(Final Examination)](https://99lash.github.io/CCS-107/Examination-Site/)
